@@ -181,7 +181,11 @@ html {
     &.justify-center { justify-content: center; }
     &.justify-left { justify-content: left; }
     &.justify-right { justify-content: right; }
+    &.justify-between { justify-content: space-between; }
+    &.justify-around { justify-content: space-around; }
+    &.justify-evenly { justify-content: space-evenly; }
     &.align-center { align-items: center; }
+    &.align-stretch { align-items: stretch; }
     &.align-top { align-items: flex-start; }
     &.align-bottom { align-items: flex-end; }
 }
