@@ -1,0 +1,198 @@
+@import './node_modules/scss-reset/src/scss/_reset.scss';
+
+// SETUP
+
+$container-max-width: 1140px; 
+
+$list: 
+    calc((100% - 20px * 11) / 12)
+    calc((100% - 20px * 5) / 6)
+    calc((100% - 20px * 3) / 4)
+    calc((100% - 20px * 2) / 3)
+    calc((100% - 20px) / 2.4)
+    calc((100% - 20px) / 2)
+    calc((100% - 20px) / 1.7)
+    calc((100% - 20px) / 1.5)
+    calc((100% - 20px) / 1.33)
+    calc((100% - 20px) / 1.2)
+    calc((100% - 20px) / 1.1)
+    100%;
+   
+@mixin get-col-size($index) {
+  width: nth($list, $index);
+}
+
+@mixin get-off-size($index) {
+    margin-left: nth($list, $index);
+}
+
+$primary: #0000FF;
+$secondary: #878787;
+$warning: #FFFF00;
+$error: #FF0000;
+$highlight: #00FF00;
+$light: #cccccc;
+$dark: #3d3d3d;
+
+$brightnessStart: 0;
+$brightnessEnd: 49;
+
+$sizeIncrement: 1%;
+
+$sizeStart: 1;
+$sizeEnd: 101;
+
+html {
+    box-sizing: border-box;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+    margin: inherit;
+    padding: inherit;
+}
+
+// GRID
+
+.container { 
+    max-width: $container-max-width; 
+    margin: 0 auto; 
+}
+
+.row { 
+    width: 100%; 
+    float: left; 
+
+    &:after {
+        display: table; 
+        clear: both; 
+        content: ''; 
+    }
+}
+
+@media (max-width: 500px) {
+    @for $i from 1 through 12 {
+        .col-#{$i} { 
+            @include get-col-size($i);  
+            float: left; 
+        }
+        
+        @if $i != 12 {
+            .off-#{$i} { margin-left: 0; }
+        }
+    }
+  }
+  
+  @media (min-width: 500px) {
+    @for $i from 1 through 12 {
+        .col-#{$i} { 
+            @include get-col-size($i);  
+
+            @if $i != 12 {
+                margin-left: 20px; 
+            }
+
+            float: left; 
+        }
+    }
+
+    @for $i from 1 through 12 {
+        .off-#{$i} { 
+            @include get-off-size($i);  
+        }
+    }
+}
+
+// COLORS
+@for $i from $brightnessStart through $brightnessEnd {
+    @if $i == 0 {
+        .bg-primary { background-color: $primary; }
+        .bg-secondary { background-color: $secondary; }
+        .bg-warning { background-color: $warning; }
+        .bg-error { background-color: $error; }
+        .bg-highlight { background-color: $highlight; }
+        .bg-light { background-color: $light; }
+        .bg-dark { background-color: $dark; }
+        
+        .text-primary { color: $primary; }
+        .text-secondary { color: $secondary; }
+        .text-warning { color: $warning; }
+        .text-error { color: $error; }
+        .text-highlight { color: $highlight; }
+        .text-light { color: $light; }
+        .text-dark { color: $dark; }
+    } @else {
+        .bg-primary-#{$i} { background-color: darken($primary, $i); }
+        .bg-secondary-#{$i} { background-color: darken($secondary, $i); }
+        .bg-warning-#{$i} { background-color: darken($warning, $i); }
+        .bg-error-#{$i} { background-color: darken($error, $i); }
+        .bg-highlight-#{$i} { background-color: darken($highlight, $i); }
+        .bg-light-#{$i} { background-color: darken($light, $i); }
+        .bg-dark-#{$i} { background-color: darken($dark, $i); }
+        
+        .text-primary-#{$i} { background-color: darken($primary, $i); }
+        .text-secondary-#{$i} { background-color: darken($secondary, $i); }
+        .text-warning-#{$i} { background-color: darken($warning, $i); }
+        .text-error-#{$i} { background-color: darken($error, $i); }
+        .text-highlight-#{$i} { background-color: darken($highlight, $i); }
+        .text-light-#{$i} { background-color: darken($light, $i); }
+        .text-dark-#{$i} { background-color: darken($dark, $i); }
+    }
+}
+
+// SIZING
+
+@for $i from $sizeStart to $sizeEnd {
+    .w-#{$i} { width: $sizeIncrement * $i; }
+}
+
+@for $i from $sizeStart to $sizeEnd {
+    .h-#{$i} { height: $sizeIncrement * $i; }
+}
+
+@for $i from $sizeStart to $sizeEnd {
+    .p-#{$i} { padding: $sizeIncrement * $i; }
+    .pt-#{$i} { padding-top: $sizeIncrement * $i; }
+    .pr-#{$i} { padding-right: $sizeIncrement * $i; }
+    .pb-#{$i} { padding-bottom: $sizeIncrement * $i; }
+    .pl-#{$i} { padding-left: $sizeIncrement * $i; }
+    .px-#{$i} { padding: 0 $sizeIncrement * $i; }
+    .py-#{$i} { padding: $sizeIncrement * $i 0; }
+}
+
+@for $i from $sizeStart to $sizeEnd {
+    .m-#{$i} { margin: $sizeIncrement * $i }
+    .mt-#{$i} { margin-top: $sizeIncrement * $i; }
+    .mr-#{$i} { margin-right: $sizeIncrement * $i; }
+    .mb-#{$i} { margin-bottom: $sizeIncrement * $i; }
+    .ml-#{$i} { margin-left: $sizeIncrement * $i; }
+    .mx-#{$i} { margin: 0 $sizeIncrement * $i; }
+    .my-#{$i} { margin: $sizeIncrement * $i 0; }
+}
+
+.flex {
+    display: flex;
+
+    &.justify-center { justify-content: center; }
+    &.justify-left { justify-content: left; }
+    &.justify-right { justify-content: right; }
+    &.align-center { align-items: center; }
+    &.align-top { align-items: flex-start; }
+    &.align-bottom { align-items: flex-end; }
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-center {
+    text-align: center;
+}
+.text-right {
+    text-align: 'right';
+}

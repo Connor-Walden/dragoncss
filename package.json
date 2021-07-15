@@ -1,0 +1,17 @@
+{
+  "name": "dragoncss2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "css-minify -f dragon.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "css-minify": "^1.1.0",
+    "scss-reset": "^1.2.0"
+  }
+}
