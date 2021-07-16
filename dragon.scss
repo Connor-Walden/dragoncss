@@ -4,7 +4,7 @@
 
 $container-max-width: 1140px; 
 
-$list: 
+$sizingList: 
     calc((100% - 20px * 11) / 12)
     calc((100% - 20px * 5) / 6)
     calc((100% - 20px * 3) / 4)
@@ -19,11 +19,11 @@ $list:
     100%;
    
 @mixin get-col-size($index) {
-  width: nth($list, $index);
+  width: nth($sizingList, $index);
 }
 
 @mixin get-off-size($index) {
-    margin-left: nth($list, $index);
+    margin-left: nth($sizingList, $index);
 }
 
 $primary: #0000FF;
@@ -62,6 +62,7 @@ html {
 .container { 
     max-width: $container-max-width; 
     margin: 0 auto; 
+    display: flex;
 }
 
 .row { 
@@ -111,37 +112,37 @@ html {
 // COLORS
 @for $i from $brightnessStart through $brightnessEnd {
     @if $i == 0 {
-        .bg-primary { background-color: $primary; }
-        .bg-secondary { background-color: $secondary; }
-        .bg-warning { background-color: $warning; }
-        .bg-error { background-color: $error; }
-        .bg-highlight { background-color: $highlight; }
-        .bg-light { background-color: $light; }
-        .bg-dark { background-color: $dark; }
+        .bg-primary { background-color: $primary !important; }
+        .bg-secondary { background-color: $secondary !important; }
+        .bg-warning { background-color: $warning !important; }
+        .bg-error { background-color: $error !important; }
+        .bg-highlight { background-color: $highlight !important; }
+        .bg-light { background-color: $light !important; }
+        .bg-dark { background-color: $dark !important; }
         
-        .text-primary { color: $primary; }
-        .text-secondary { color: $secondary; }
-        .text-warning { color: $warning; }
-        .text-error { color: $error; }
-        .text-highlight { color: $highlight; }
-        .text-light { color: $light; }
-        .text-dark { color: $dark; }
+        .text-primary { color: $primary !important; }
+        .text-secondary { color: $secondary !important; }
+        .text-warning { color: $warning !important; }
+        .text-error { color: $error !important; }
+        .text-highlight { color: $highlight !important; }
+        .text-light { color: $light !important; }
+        .text-dark { color: $dark !important; }
     } @else {
-        .bg-primary-#{$i} { background-color: darken($primary, $i); }
-        .bg-secondary-#{$i} { background-color: darken($secondary, $i); }
-        .bg-warning-#{$i} { background-color: darken($warning, $i); }
-        .bg-error-#{$i} { background-color: darken($error, $i); }
-        .bg-highlight-#{$i} { background-color: darken($highlight, $i); }
-        .bg-light-#{$i} { background-color: darken($light, $i); }
-        .bg-dark-#{$i} { background-color: darken($dark, $i); }
+        .bg-primary-#{$i} { background-color: darken($primary, $i) !important; }
+        .bg-secondary-#{$i} { background-color: darken($secondary, $i) !important; }
+        .bg-warning-#{$i} { background-color: darken($warning, $i) !important; }
+        .bg-error-#{$i} { background-color: darken($error, $i) !important; }
+        .bg-highlight-#{$i} { background-color: darken($highlight, $i) !important; }
+        .bg-light-#{$i} { background-color: darken($light, $i) !important; }
+        .bg-dark-#{$i} { background-color: darken($dark, $i) !important; }
         
-        .text-primary-#{$i} { background-color: darken($primary, $i); }
-        .text-secondary-#{$i} { background-color: darken($secondary, $i); }
-        .text-warning-#{$i} { background-color: darken($warning, $i); }
-        .text-error-#{$i} { background-color: darken($error, $i); }
-        .text-highlight-#{$i} { background-color: darken($highlight, $i); }
-        .text-light-#{$i} { background-color: darken($light, $i); }
-        .text-dark-#{$i} { background-color: darken($dark, $i); }
+        .text-primary-#{$i} { background-color: darken($primary, $i) !important; }
+        .text-secondary-#{$i} { background-color: darken($secondary, $i) !important; }
+        .text-warning-#{$i} { background-color: darken($warning, $i) !important; }
+        .text-error-#{$i} { background-color: darken($error, $i) !important; }
+        .text-highlight-#{$i} { background-color: darken($highlight, $i) !important; }
+        .text-light-#{$i} { background-color: darken($light, $i) !important; }
+        .text-dark-#{$i} { background-color: darken($dark, $i) !important ; }
     }
 }
 
@@ -190,13 +191,128 @@ html {
     &.align-bottom { align-items: flex-end; }
 }
 
-.text-left {
-    text-align: left;
+.text-left { text-align: left; }
+.text-center { text-align: center; }
+.text-right { text-align: 'right'; }
+
+.rounded { border-radius: 5px; } 
+
+.box-shadow { box-shadow: 0 0 10px $dark !important; }
+.box-shadow-top { box-shadow: 0 -3px 10px $dark !important; }
+.box-shadow-right { box-shadow: 3px 0 10px $dark !important; }
+.box-shadow-bottom { box-shadow: 0 3px 10px $dark !important; }
+.box-shadow-left { box-shadow: -3px 0 10px $dark !important; }
+
+.box-shadow-hard { box-shadow: 0 0 5px $dark !important; }
+.box-shadow-hard-top { box-shadow: 0 -3px 5px $dark !important; }
+.box-shadow-hard-right { box-shadow: 3px 0 5px $dark !important; }
+.box-shadow-hard-bottom { box-shadow: 0 3px 5px $dark !important; }
+.box-shadow-hard-left { box-shadow: -3px 0 5px $dark !important; }
+
+.box-shadow-solid { box-shadow: 0 0 0 $dark !important; }
+.box-shadow-solid-top { box-shadow: 0 -3px 0 $dark !important; }
+.box-shadow-solid-right { box-shadow: 3px 0 0 $dark !important; }
+.box-shadow-solid-bottom { box-shadow: 0 3px 0 $dark !important; }
+.box-shadow-solid-left { box-shadow: -3px 0 0 $dark !important; }
+
+.text-shadow { text-shadow: 0 0 10px $dark !important; }
+.text-shadow-top { text-shadow: 0 -3px 10px $dark !important; }
+.text-shadow-right { text-shadow: 3px 0 10px $dark !important; }
+.text-shadow-bottom { text-shadow: 0 3px 10px $dark !important; }
+.text-shadow-left { text-shadow: -3px 0 10px $dark !important; }
+
+.text-shadow-hard { text-shadow: 0 0 5px $dark !important; }
+.text-shadow-hard-top { text-shadow: 0 -3px 5px $dark !important; }
+.text-shadow-hard-right { text-shadow: 3px 0 5px $dark !important; }
+.text-shadow-hard-bottom { text-shadow: 0 3px 5px $dark !important; }
+.text-shadow-hard-left { text-shadow: -3px 0 5px $dark !important; }
+
+.text-shadow-solid { text-shadow: 0 0 0 $dark !important; }
+.text-shadow-solid-top { text-shadow: 0 -3px 0 $dark !important; }
+.text-shadow-solid-right { text-shadow: 3px 0 0 $dark !important; }
+.text-shadow-solid-bottom { text-shadow: 0 3px 0 $dark !important; }
+.text-shadow-solid-left { text-shadow: -3px 0 0 $dark !important; }
+
+.unselectable {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
-.text-center {
-    text-align: center;
-}
-.text-right {
-    text-align: 'right';
+// STYLES
+h1, h2, h3, h4, h5, h6 { font-weight: bold; color: $dark !important; }
+p { color: $dark !important; }
+
+// COMPONENTS
+.navbar {
+    width: 100%;
+    min-height: 75px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: solid 1px $dark;
+    margin-bottom: 15px;
+    box-shadow: 0 3px 10px $dark;
+
+    @media (max-width: 720px) { flex-direction: column; }
+    @media (min-width: 720px) { flex-direction: row; }
+    
+    &.navbar-primary { background-color: $primary }
+    &.navbar-secondary { background-color: $secondary }
+    &.navbar-warning { background-color: $warning }
+    &.navbar-error { background-color: $error }
+    &.navbar-highlight { background-color: $highlight }
+    &.navbar-light { background-color: $light }
+    &.navbar-dark { background-color: $dark }
+
+    .nav-heading {
+        font-size: larger;
+
+        @media (min-width: 720px) { margin-left: 5%; }
+        @media (max-width: 720px) { margin-top: 10px; }
+    }
+
+    .nav-menu {
+        display: flex;
+        width: 100%;
+        margin-right: 5%;
+        padding: 5px;
+
+        @media (max-width: 720px) { justify-content: space-evenly; margin-bottom: 10px; }
+        @media (min-width: 720px) { flex-direction: row; justify-content: flex-end; }
+
+        .nav-item {
+            margin-left: 10px;
+            display: flex;
+            align-items: center;
+
+            .nav-link {
+                cursor: pointer;
+                color: $primary;
+
+                &:hover { text-decoration: underline; color: darken($primary, 20); }
+                &:active { cursor: grabbing; }
+            }
+
+            .nav-button {
+                border-radius: 5px;
+                background-color: $primary;
+                padding: 5px 10px;
+                color: $light;
+
+                &:hover { background-color: darken($primary, 20); }
+                &:active { cursor: grabbing; }
+            }
+
+            .nav-search {
+                border-radius: 5px;
+                padding: 2px 5px;
+                background-color: $light;
+                color: $dark;
+
+                &:focus { box-shadow: 0 0 5px $dark inset !important; }
+            }
+        }
+    }
 }
