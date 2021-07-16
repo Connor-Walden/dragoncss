@@ -1,4 +1,4 @@
-![dragon](https://user-images.githubusercontent.com/20080981/125919299-fc0b7b22-ff01-4ac3-9380-74ac50f3a09f.jpeg)
+![dragon](https://user-images.githubusercontent.com/20080981/125921861-8e43b043-527a-44c2-a31f-efdff097427a.png)
 
 # DRAGON CSS FRAMEWORK 🤑
 Take flight with Dragon today! 
