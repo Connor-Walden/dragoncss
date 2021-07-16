@@ -9,7 +9,7 @@ This is version 2.0 of the original 'dragon-css' and in order to live up to it's
 # CURRENTLY SUPPORTED FEATURES 🤗
 - GRID
   - 📦 class='container' - Now using flexbox to stablize and extend our capabilities.
-  - 🚣 class='row' - Pretty much the same as before 😬
+  - 🚣 class='row' - Pretty much the same as before 😬 just contains and keeps the columns in check ✅
   - 🏛 class='col-[size]' - 12 column grid system.
   -  🏛class='off-[size]' - up to 11 columns of offset towards the right of the row.
 
