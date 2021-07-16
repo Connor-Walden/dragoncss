@@ -70,7 +70,7 @@ This is version 2.0 of the original 'dragon-css' and in order to live up to it's
     - ⭕️ class='spinner-[size (1 - 5)]' - Use this custom css spinner to show your users when something is loading
 
 # INSTALLATION
-To install the latest version of Dragon include a stylesheet link to https://cdn.jsdelivr.net/gh/Connor-Walden/dragoncss/css-dist/dragon.min.css and hack away!
+To install the latest version of Dragon include a stylesheet link to https://cdn.jsdelivr.net/gh/Connor-Walden/dragoncss/css-dist/dragon.min.css in your head and hack away!
 
 # BUILT WITH
 - HTML
