@@ -8,15 +8,56 @@ This is version 2.0 of the original 'dragon-css' and in order to live up to it's
 
 # CURRENTLY SUPPORTED FEATURES 🤗
 - GRID
-  - class='container' - Now using flexbox to stablize and extend our capabilities.
-  - class='row' - Pretty much the same as before 😬
-  - class='col-[size]' - 12 column grid system.
-  - class='off-[size]' - up to 11 columns of offset towards the right of the row.
-- COLOURS
-  - class='primary-[shading level (0 - 49)]' - 💙
-  - class='secondary-[shading level (0 - 49)]' - 🗄
-  - class='warning-[shading level (0 - 49)]' - 💛
-  - class='error-[shading level (0 - 49)]' - 💔
-  - class='highlight-[shading level (0 - 49)]' - 💚
-  - class='light-[shading level (0 - 49)]' - 🤍
-  - class='dark-[shading level (0 - 49)]' - 🖤
+  - 📦 class='container' - Now using flexbox to stablize and extend our capabilities.
+  - 🚣 class='row' - Pretty much the same as before 😬
+  - 🏛 class='col-[size]' - 12 column grid system.
+  -  🏛class='off-[size]' - up to 11 columns of offset towards the right of the row.
+
+- COLOURS (REMINDER: The brightest possible shade has no '-[shading level]' at the end just '[colour]')
+  - 💙 class='primary-[shading level (1 - 49)]'
+  - 🤎 class='secondary-[shading level (1 - 49)]'
+  - 💛 class='warning-[shading level (1 - 49)]'
+  - 💔 class='error-[shading level (1 - 49)]' 
+  - 💚 class='highlight-[shading level (1 - 49)]' 
+  - 🤍 class='light-[shading level (1 - 49)]' 
+  - 🖤 class='dark-[shading level (1 - 49)]'
+
+- UTILITY
+  - ⇥⇤ class='w-[size (1-100)]' - change the width of an element
+  - ⇥⇤ class='h-[size (1-100)]' - change the height of an element
+  
+  - 📖 class='m-[size (1-100)]' - change the margin on all sides of an element
+  - 📖 class='mt-[size (1-100)]' - change the margin on the top of an element
+  - 📖 class='mr-[size (1-100)]' - change the margin on the right of an element
+  - 📖 class='mb-[size (1-100)]' - change the margin on the bottom of an element
+  - 📖 class='ml-[size (1-100)]' - change the margin on the left of an element
+  - 📖 class='mx-[size (1-100)]' - change the horizontal margin of an element
+  - 📖 class='my-[size (1-100)]' - change the vertical margin of an element
+  
+  - ☁️ class='p-[size (1-100)]' - change the padding on all sides of an element
+  - ☁️ class='pt-[size (1-100)]' - change the padding on the top of an element
+  - ☁️ class='pr-[size (1-100)]' - change the margin on the right of an element
+  - ☁️ class='pb-[size (1-100)]' - change the margin on the bottom of an element
+  - ☁️ class='pl-[size (1-100)]' - change the margin on the left of an element
+  - ☁️ class='px-[size (1-100)]' - change the horizontal padding of an element
+  - ☁️ class='py-[size (1-100)]' - change the vertical padding of an element
+
+  - ⛅️ class='box-shadow-[side (top, right, bottom, left)]' - add a soft shadow to an element on what ever side you want (omit the '-[side]' to get a shadow all the way around)
+  - ⛅️ class='box-shadow-[side (top, right, bottom, left)]-[strength]' - add a '-[strength (hard, solid)]' to make the standard shadow have less blur
+
+  - ⛅️ class='text-shadow-[side (top, right, bottom, left)]' - add a soft shadow to text on what ever side you want (omit the '-[side]' to get a shadow all the way around)
+  - ⛅️ class='text-shadow-[side (top, right, bottom, left)]-[strength]' - add a '-[strength (hard, solid)]' to make the standard shadow have less blur
+
+  - 🚫 class='unselectable' - Makes any text under the element this class is on unable to be selected by a user
+
+- COMPONENTS
+  - NAVBAR 
+    - 🚁 class='navbar' - New and improved navbar component, now more responsive!
+    - 👈 class='nav-heading' - The title of the site goes here 😄
+    - 🗒 class='nav-menu' - This magical class will contain the of the menu items in your navbar
+    - 📲 class='nav-item' - This informs the framework that you are about to add a navigation item such as a link, button or input field
+    - 🔘 class='nav-button' - To be fair you could use the standard 'button' but this one is specially tailored to look perfect on all devices so be careful ⚠️
+    - 🔗 class='nav-link' - Creates a responsive link element in the navigation menu in the navbar 
+    - 👤 class='nav-search' - Creates a responsive input field to be used for whatever you like!
+  - HERO
+    - 
