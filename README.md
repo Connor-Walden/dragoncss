@@ -61,6 +61,22 @@ This is version 2.0 of the original 'dragon-css' and in order to live up to it's
     - 👤 class='nav-search' - Creates a responsive input field to be used for whatever you like!
   - HERO
     - ⚡️ class='hero' - A big section you can use on your pages to display some information
-    - 🧮 class='hero-img' A custom crafted image component that responds to different device sizes!
-    - 📊 class='hero-info' This will contain all info items you want to put into your hero!
-    - 
+    - 🧮 class='hero-img' - A custom crafted image component that responds to different device sizes!
+    - 📊 class='hero-info' - This will contain all info items you want to put into your hero!
+    - 📘 class-'hero-subject' - The subject of your hero, be creative here :)
+    - 📜 class='hero-description' - Describe what you want your users to be aware of here
+    - 🕹 class='hero-button' - This is another custom button situation like the 'nav-button'
+  - SPINNER
+    - ⭕️ class='spinner-[size (1 - 5)]' - Use this custom css spinner to show your users when something is loading
+
+# INSTALLATION
+To install the latest version of Dragon include a stylesheet link to https://cdn.jsdelivr.net/gh/Connor-Walden/dragoncss/css-dist/dragon.min.css and hack away!
+
+# BUILT WITH
+- HTML
+- CSS
+- SCSS
+- Live SASS Compiler extension for vs code.
+- css-minify npm package (available via npm install css-minify)
+
+Thanks everyone <3
