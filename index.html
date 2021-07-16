@@ -9,6 +9,7 @@
         <link rel="stylesheet" href="./dragon.css">
     </head>
     <body>
+        <!-- NAVBAR -->
         <div class='navbar navbar-light'>
             <h1 class='nav-heading text-shadow unselectable'>HEADING</h1>
             <ul class='nav-menu'>
@@ -26,13 +27,28 @@
                 </li>
             </ul>
         </div>
-
+        <!-- END NAVBAR -->
 
         <div class='container bg-light rounded box-shadow'>
             <div class='row flex justify-center'>
-                <div class='col-6 text-center'>
-                    <h1>a</h1>
+                <div class='col-8'>
+                    <!-- HERO -->
+                    <div class='hero'>
+                        <img class='hero-img box-shadow' src='data:image/png;base64,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'/>
+                        <div class='hero-info'>
+                            <h2 class='hero-subject unselectable'>SUBJECT OF THE HERO</h2>
+                            <p class='hero-description unselectable'>DESCRIPTION: Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, eaque.</p>
+                            <div class='hero-button box-shadow unselectable'>HERO BUTTON</div>
+                        </div>
+                    </div>
+                    <!-- END HERO -->
                 </div>
+            </div>
+
+            <div class='row'>
+                <!-- SPINNER -->
+                <div class='spinner-5 dark'></div>
+                <!-- END SPINNER -->
             </div>
         </div>
     </body>
