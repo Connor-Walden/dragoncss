@@ -60,4 +60,7 @@ This is version 2.0 of the original 'dragon-css' and in order to live up to it's
     - 🔗 class='nav-link' - Creates a responsive link element in the navigation menu in the navbar 
     - 👤 class='nav-search' - Creates a responsive input field to be used for whatever you like!
   - HERO
+    - ⚡️ class='hero' - A big section you can use on your pages to display some information
+    - 🧮 class='hero-img' A custom crafted image component that responds to different device sizes!
+    - 📊 class='hero-info' This will contain all info items you want to put into your hero!
     - 
